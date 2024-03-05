@@ -15,9 +15,10 @@ const Products = () => {
   }, []);
 
   const addToCart = (itemData) => {
-    dispatch(addCartItem(itemData));
+    const payload={...itemData,quantity:1}
+    dispatch(addCartItem(payload));
   };
-  console.log(cart);
+
 
   return (
     <div className="products-container">
